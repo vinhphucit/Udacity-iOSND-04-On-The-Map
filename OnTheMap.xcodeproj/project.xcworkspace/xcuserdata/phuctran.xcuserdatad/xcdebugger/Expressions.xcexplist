@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "NetworkClient.makeRequest&lt;A&gt;(_:type:):NetworkClient.swift">
+      </ContextState>
+      <ContextState
+         contextName = "APIRequest.urlRequest.getter:NetworkRequest.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "urlRequest.httpBody">
+            </PersistentString>
+            <PersistentString
+               value = "components">
+            </PersistentString>
+            <PersistentString
+               value = "body">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "APIRequest.components.getter:NetworkRequest.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "queryItems">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
