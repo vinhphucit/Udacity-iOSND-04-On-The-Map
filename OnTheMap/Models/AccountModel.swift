@@ -9,7 +9,7 @@
 import Foundation
 
 struct AccountModel: Codable {
-    let registered: Bool?
-    let key: String?
+    let registered: Bool
+    let key: String
 }
 

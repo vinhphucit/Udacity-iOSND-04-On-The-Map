@@ -3,21 +3,60 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "NetworkClient.makeRequest&lt;A&gt;(_:type:):NetworkClient.swift">
+         contextName = "closure #1 in PostingViewController.findLocationByName(locationName:):PostingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "placemarks.first?.locality">
+            </PersistentString>
+            <PersistentString
+               value = "placemarks">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MapViewController.showLocations(_:):MapViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AuthenticationViewController.doLogin(email:password:):AuthenticationViewController.swift">
       </ContextState>
       <ContextState
          contextName = "APIRequest.urlRequest.getter:NetworkRequest.swift">
          <PersistentStrings>
             <PersistentString
-               value = "urlRequest.httpBody">
+               value = "body">
             </PersistentString>
             <PersistentString
                value = "components">
             </PersistentString>
             <PersistentString
-               value = "body">
+               value = "urlRequest.httpBody">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AuthenticationViewController.completeLogin(_:):AuthenticationViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "data?.user!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NetworkClient.makeRequest&lt;A&gt;(_:type:):NetworkClient.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PostingViewController.buildStudentInfo(_:):PostingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UserManager.shared.user!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MapViewController.viewDidAppear(_:):MapViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NetworkClient.makeRequest&lt;A&gt;(_:type:completion:):NetworkClient.swift">
       </ContextState>
       <ContextState
          contextName = "APIRequest.components.getter:NetworkRequest.swift">
@@ -26,6 +65,17 @@
                value = "queryItems">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "APIRequest.subpath.getter:NetworkRequest.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UserManager.shared.session?.account?.key!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AuthenticationViewController.completeLogin(_:):AuthenticationViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

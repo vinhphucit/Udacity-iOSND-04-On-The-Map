@@ -10,7 +10,17 @@
 		C5891BFA2074D2F10076587B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891BF92074D2F10076587B /* MapViewController.swift */; };
 		C5891BFC2074D32F0076587B /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891BFB2074D32F0076587B /* LocationsViewController.swift */; };
 		C5891BFE2074D3A40076587B /* LocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891BFD2074D3A40076587B /* LocationViewCell.swift */; };
-		C5891C002074D8880076587B /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891BFF2074D8880076587B /* AddLocationViewController.swift */; };
+		C5891C022074EE7D0076587B /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C012074EE7D0076587B /* StudentInformation.swift */; };
+		C5891C04207501AF0076587B /* LocationsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C03207501AF0076587B /* LocationsResponseModel.swift */; };
+		C5891C062075F4C50076587B /* TabBarLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C052075F4C50076587B /* TabBarLocationsViewController.swift */; };
+		C5891C082075F51D0076587B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C072075F51D0076587B /* UserManager.swift */; };
+		C5891C0A207615650076587B /* LogoutResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C09207615650076587B /* LogoutResponseModel.swift */; };
+		C5891C0C207615890076587B /* SessionLogoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C0B207615890076587B /* SessionLogoutModel.swift */; };
+		C5891C0E207620240076587B /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C0D207620240076587B /* PostingViewController.swift */; };
+		C5891C1020765B030076587B /* ConfirmPostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C0F20765B030076587B /* ConfirmPostingViewController.swift */; };
+		C5891C12207716F30076587B /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C11207716F30076587B /* UserInfoModel.swift */; };
+		C5891C14207720020076587B /* UserInfoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C13207720010076587B /* UserInfoResponseModel.swift */; };
+		C5891C1620776D510076587B /* PostStudentLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5891C1520776D510076587B /* PostStudentLocationResponse.swift */; };
 		C5F5EA89207221A600053A54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5EA88207221A600053A54 /* AppDelegate.swift */; };
 		C5F5EA8B207221A600053A54 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5EA8A207221A600053A54 /* AuthenticationViewController.swift */; };
 		C5F5EA8E207221A600053A54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5F5EA8C207221A600053A54 /* Main.storyboard */; };
@@ -34,7 +44,17 @@
 		C5891BF92074D2F10076587B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C5891BFB2074D32F0076587B /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		C5891BFD2074D3A40076587B /* LocationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewCell.swift; sourceTree = "<group>"; };
-		C5891BFF2074D8880076587B /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		C5891C012074EE7D0076587B /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		C5891C03207501AF0076587B /* LocationsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsResponseModel.swift; sourceTree = "<group>"; };
+		C5891C052075F4C50076587B /* TabBarLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarLocationsViewController.swift; sourceTree = "<group>"; };
+		C5891C072075F51D0076587B /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		C5891C09207615650076587B /* LogoutResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseModel.swift; sourceTree = "<group>"; };
+		C5891C0B207615890076587B /* SessionLogoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionLogoutModel.swift; sourceTree = "<group>"; };
+		C5891C0D207620240076587B /* PostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
+		C5891C0F20765B030076587B /* ConfirmPostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPostingViewController.swift; sourceTree = "<group>"; };
+		C5891C11207716F30076587B /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		C5891C13207720010076587B /* UserInfoResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponseModel.swift; sourceTree = "<group>"; };
+		C5891C1520776D510076587B /* PostStudentLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStudentLocationResponse.swift; sourceTree = "<group>"; };
 		C5F5EA85207221A600053A54 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F5EA88207221A600053A54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5F5EA8A207221A600053A54 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +116,7 @@
 				C5F5EA9C2072221E00053A54 /* Views */,
 				C5F5EA88207221A600053A54 /* AppDelegate.swift */,
 				C5F5EAA1207223C200053A54 /* Constants.swift */,
+				C5891C072075F51D0076587B /* UserManager.swift */,
 			);
 			path = OnTheMap;
 			sourceTree = "<group>";
@@ -103,10 +124,12 @@
 		C5F5EA9A2072220F00053A54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C5891C0D207620240076587B /* PostingViewController.swift */,
 				C5F5EA8A207221A600053A54 /* AuthenticationViewController.swift */,
 				C5891BF92074D2F10076587B /* MapViewController.swift */,
 				C5891BFB2074D32F0076587B /* LocationsViewController.swift */,
-				C5891BFF2074D8880076587B /* AddLocationViewController.swift */,
+				C5891C052075F4C50076587B /* TabBarLocationsViewController.swift */,
+				C5891C0F20765B030076587B /* ConfirmPostingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +140,9 @@
 				C5F5EAAF2073712E00053A54 /* SessionModel.swift */,
 				C5F5EAB12073716E00053A54 /* AccountModel.swift */,
 				C5F5EAB3207371E000053A54 /* AuthSessionModel.swift */,
+				C5891C012074EE7D0076587B /* StudentInformation.swift */,
+				C5891C0B207615890076587B /* SessionLogoutModel.swift */,
+				C5891C11207716F30076587B /* UserInfoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +222,10 @@
 		C5F5EAB8207499F200053A54 /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
+				C5891C03207501AF0076587B /* LocationsResponseModel.swift */,
+				C5891C09207615650076587B /* LogoutResponseModel.swift */,
+				C5891C13207720010076587B /* UserInfoResponseModel.swift */,
+				C5891C1520776D510076587B /* PostStudentLocationResponse.swift */,
 			);
 			path = ResponseModels;
 			sourceTree = "<group>";
@@ -272,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5891C14207720020076587B /* UserInfoResponseModel.swift in Sources */,
 				C5F5EAB62073904A00053A54 /* NetworkConstants.swift in Sources */,
 				C5F5EABA20749A1700053A54 /* LoginRequestModel.swift in Sources */,
+				C5891C0C207615890076587B /* SessionLogoutModel.swift in Sources */,
 				C5F5EAAB207232C300053A54 /* NetworkRequest.swift in Sources */,
 				C5891BFC2074D32F0076587B /* LocationsViewController.swift in Sources */,
 				C5F5EAB4207371E000053A54 /* AuthSessionModel.swift in Sources */,
@@ -282,13 +314,21 @@
 				C5F5EAB02073712E00053A54 /* SessionModel.swift in Sources */,
 				C5F5EAA72072321800053A54 /* NetworkClient.swift in Sources */,
 				C5F5EABC20749C0200053A54 /* AccountLoginRequestModel.swift in Sources */,
+				C5891C022074EE7D0076587B /* StudentInformation.swift in Sources */,
+				C5891C0A207615650076587B /* LogoutResponseModel.swift in Sources */,
 				C5F5EA89207221A600053A54 /* AppDelegate.swift in Sources */,
+				C5891C062075F4C50076587B /* TabBarLocationsViewController.swift in Sources */,
 				C5F5EAB22073716E00053A54 /* AccountModel.swift in Sources */,
 				C5F5EAA2207223C200053A54 /* Constants.swift in Sources */,
-				C5891C002074D8880076587B /* AddLocationViewController.swift in Sources */,
+				C5891C0E207620240076587B /* PostingViewController.swift in Sources */,
+				C5891C1620776D510076587B /* PostStudentLocationResponse.swift in Sources */,
+				C5891C04207501AF0076587B /* LocationsResponseModel.swift in Sources */,
 				C5F5EAA92072326E00053A54 /* GCDBlackBox.swift in Sources */,
 				C5F5EAAE207238F900053A54 /* UIViewController.swift in Sources */,
 				C5891BFA2074D2F10076587B /* MapViewController.swift in Sources */,
+				C5891C12207716F30076587B /* UserInfoModel.swift in Sources */,
+				C5891C082075F51D0076587B /* UserManager.swift in Sources */,
+				C5891C1020765B030076587B /* ConfirmPostingViewController.swift in Sources */,
 				C5F5EAA5207230BC00053A54 /* MiscUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -44,16 +44,20 @@ class AuthenticationViewController: UIViewController {
     }
     
     @IBAction func onClickSignUpButton(_ sender: Any) {
+        MiscUtils.openExternalLink("https://auth.udacity.com/sign-up")
     }
     
     private func doLogin(email: String, password: String){
         NetworkClient.shared.doLogin(email: email, password: password, completion: { (data, error) in
+            
             if error != nil {
+                
                 self.presentAlert(title: "Login Fail", message: error!) { (alert) in
-                    self.setUIEnabled(true)
+                self.setUIEnabled(true)
                 }
                 
             }else {
+                
                self.completeLogin(data!)
             }
             
@@ -61,7 +65,23 @@ class AuthenticationViewController: UIViewController {
     }
     
     private func completeLogin(_ session: AuthSessionModel){
-         self.performSegue(withIdentifier: "goToMainScreenSegue", sender: nil)
+        UserManager.shared.session = session
+        NetworkClient.shared.doGetUserInfo(completion: { (data, error) in
+            self.setUIEnabled(true)
+            if error != nil {
+                self.presentAlert(title: "Can not get User Info", message: error!) { (alert) in
+                    
+                }
+                
+            }else {
+                self.tfEmail.text = ""
+                self.tfPassword.text = ""
+                UserManager.shared.user = data?.user
+                self.performSegue(withIdentifier: "goToMainScreenSegue", sender: nil)
+            }
+            
+        })
+         
     }
 }
 
@@ -69,5 +89,7 @@ extension AuthenticationViewController {
     private func setUIEnabled(_ enabled: Bool) {
         btnLogin.isEnabled = enabled
         btnLogin.alpha = enabled ? 1.0 : 0.5
+        tfEmail.isEnabled = enabled
+        tfPassword.isEnabled = enabled
     }
 }

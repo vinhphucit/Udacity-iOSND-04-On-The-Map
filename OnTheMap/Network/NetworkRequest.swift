@@ -23,7 +23,10 @@ enum APISource {
 
 enum APIRequest {
     case doLogin(email: String, password: String)
-    
+    case doLoadUserInfo()
+    case doLogout(session: String)
+    case getStudenLocations()
+    case doPostAStudenLocation(student: StudentInformation)
     // MARK: URL Request
     
     var urlRequest: URLRequest? {
@@ -62,7 +65,14 @@ enum APIRequest {
                 return nil
             }
             
-            
+        case .doPostAStudenLocation(let student):
+            do {
+                let encoder = JSONEncoder()
+                let data =  try encoder.encode(student)
+                return data
+            } catch {
+                return nil
+            }
         default:
             return nil
         }
@@ -72,8 +82,10 @@ enum APIRequest {
     
     var method: HTTPMethod {
         switch self {
-        case .doLogin:
+        case .doLogin, .doPostAStudenLocation:
             return .post
+        case .doLogout:
+            return .delete
         default:
             return .get
         }
@@ -82,12 +94,26 @@ enum APIRequest {
     // MARK: Headers
     
     var headers: [String: String] {
-        switch self.method {
-        case .post, .put, .update:
-            return [NetworkConstants.HTTPHeaderField.contentType: NetworkConstants.HTTPHeaderFieldValue.json, NetworkConstants.HTTPHeaderField.accept: NetworkConstants.HTTPHeaderFieldValue.json]
+        switch self.apisource {
+        case .udacity:
+            switch self.method {
+            case .post, .put, .update:
+                return [NetworkConstants.UdacityHeaderKeys.ContentType: NetworkConstants.UdacityHeaderValues.json, NetworkConstants.UdacityHeaderKeys.Accept: NetworkConstants.UdacityHeaderValues.json]
+            case .delete:
+                switch self {
+                case .doLogout(let session):
+                    return ["XSRF-TOKEN":session]
+                default:
+                    return [:]
+                }
+            default:
+                return [:]
+            }
         default:
-            return [:]
+            return [NetworkConstants.ParseHeaderKeys.APIKey: NetworkConstants.ParseHeaderValues.APIKey, NetworkConstants.ParseHeaderKeys.ApplicationID: NetworkConstants.ParseHeaderValues.ApplicationID,
+            NetworkConstants.UdacityHeaderKeys.ContentType: NetworkConstants.UdacityHeaderValues.json]
         }
+        
     }
     
     // MARK: Components
@@ -118,27 +144,12 @@ enum APIRequest {
     // MARK: Query Items
     
     var queryItems: [URLQueryItem] {
-        let items = [URLQueryItem]()
+        var items = [URLQueryItem]()
         
-        // most requests need the api key
-        //        switch self {
-        //        case .getImage:
-        //            break
-        //        default:
-        //            items.append(URLQueryItem(name: TMDB.QueryKeys.apiKey, value: TMDB.apiKey))
-        //        }
-        
-        // certain requests have additional query items
         switch self {
-            //        case .doLogin(let email, let password):
-            //            items.append(URLQueryItem(name: TMDB.QueryKeys.requestToken, value: token))
-            //        case .searchMovies(let query):
-            //            items.append(URLQueryItem(name: TMDB.QueryKeys.query, value: query))
-            //        case .getAccount, .getFavorites, .getWatchlist,
-            //             .markFavorite, .markWatchlist, .getMovieState:
-            //            if let sessionID = TMDB.shared.sessionID {
-            //                items.append(URLQueryItem(name: TMDB.QueryKeys.sessionID, value: sessionID))
-        //            }
+        case .getStudenLocations:
+            items.append(URLQueryItem(name: NetworkConstants.ParseParameterKeys.Limit, value: NetworkConstants.ParseParameterValues.Limit))
+            items.append(URLQueryItem(name: NetworkConstants.ParseParameterKeys.Order, value: NetworkConstants.ParseParameterValues.Order))
         default:
             break
         }
@@ -151,14 +162,20 @@ enum APIRequest {
     
     var subpath: String {
         switch self {
-        case .doLogin: return "/session"
+        case .doLogin, .doLogout:
+            return NetworkConstants.UdacityMethods.Authentication
+        case .doLoadUserInfo:
+            return "\(NetworkConstants.UdacityMethods.Users)/\((UserManager.shared.session?.account?.key)!)"
+        case .getStudenLocations:
+            return NetworkConstants.ParseMethods.StudentLocation
+        case .doPostAStudenLocation(let student):
+            return NetworkConstants.ParseMethods.StudentLocation
         }
-        return ""
     }
     
     var apisource: APISource {
         switch self {
-        case .doLogin:
+        case .doLogin, .doLogout, .doLoadUserInfo:
             return APISource.udacity
         default:
             return APISource.parse

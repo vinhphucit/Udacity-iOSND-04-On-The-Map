@@ -139,26 +139,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ibt-97-xGH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="27.5"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pin" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-hL-Wfk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="43.5"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pin" translatesAutoresizingMaskIntoConstraints="NO" id="0Xf-hL-Wfk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="27.5"/>
                                                             <color key="tintColor" red="0.0" green="0.70196078429999997" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="45" id="c8e-MR-gQf"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8Nl-Vg-Dee">
-                                                            <rect key="frame" x="53" y="0.0" width="322" height="43.5"/>
+                                                            <rect key="frame" x="53" y="0.0" width="322" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLk-bJ-GZQ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="322" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="322" height="13.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyN-Da-Djm">
-                                                                    <rect key="frame" x="0.0" y="24.5" width="322" height="19"/>
+                                                                    <rect key="frame" x="0.0" y="16.5" width="322" height="11"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" red="0.49019607843137253" green="0.60392156862745094" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -170,9 +170,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="ibt-97-xGH" secondAttribute="trailing" id="0pj-ZW-D0b"/>
-                                                <constraint firstAttribute="bottom" secondItem="ibt-97-xGH" secondAttribute="bottom" id="BkW-DQ-ZVB"/>
+                                                <constraint firstAttribute="bottom" secondItem="ibt-97-xGH" secondAttribute="bottom" constant="8" id="BkW-DQ-ZVB"/>
                                                 <constraint firstItem="ibt-97-xGH" firstAttribute="leading" secondItem="Zho-pP-Pfs" secondAttribute="leading" id="eAc-pm-2tz"/>
-                                                <constraint firstItem="ibt-97-xGH" firstAttribute="top" secondItem="Zho-pP-Pfs" secondAttribute="top" id="pKc-pD-e5o"/>
+                                                <constraint firstItem="ibt-97-xGH" firstAttribute="top" secondItem="Zho-pP-Pfs" secondAttribute="top" constant="8" id="pKc-pD-e5o"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -181,6 +181,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BCO-xF-zjA" id="Lyv-gy-3KO"/>
+                                    <outlet property="delegate" destination="BCO-xF-zjA" id="0dv-fR-pTw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,6 +200,9 @@
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                         <color key="badgeColor" red="0.0" green="0.70196078429999997" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableviewLocations" destination="DB3-lG-SpH" id="hbR-eU-e3F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDR-lq-gYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +244,7 @@
         <!--Add Location-->
         <scene sceneID="CYY-SN-LqS">
             <objects>
-                <viewController id="Wqr-sc-jgq" customClass="AddLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wqr-sc-jgq" customClass="PostingViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bQz-Ff-5NR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,7 +287,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="onClickFindLocationButton:" destination="Wqr-sc-jgq" eventType="touchUpInside" id="YQF-qW-AUi"/>
+                                            <action selector="onClickFindLocationButton:" destination="Wqr-sc-jgq" eventType="touchUpInside" id="Bur-Wr-HPC"/>
                                         </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RCM-pI-cAd">
@@ -317,7 +324,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="w9L-l3-NEY" kind="show" identifier="goToConfirmAddLocationSegue" id="orW-YW-bV1"/>
+                        <outlet property="btnFindLocation" destination="ytg-xi-PEz" id="Gr6-18-9sA"/>
+                        <outlet property="tfLink" destination="l1e-me-nID" id="BZ9-4O-zlP"/>
+                        <outlet property="tfLocation" destination="S3E-QO-HbA" id="0pP-D4-nSq"/>
+                        <segue destination="w9L-l3-NEY" kind="show" identifier="goToConfirmAddLocationSegue" id="YGu-Cz-7Re"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dg-VE-syr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,7 +337,7 @@
         <!--Add Location-->
         <scene sceneID="wEY-gE-EVM">
             <objects>
-                <viewController id="w9L-l3-NEY" sceneMemberID="viewController">
+                <viewController id="w9L-l3-NEY" customClass="ConfirmPostingViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HRI-1h-kPY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,6 +362,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onClickFindLocationButton:" destination="Wqr-sc-jgq" eventType="touchUpInside" id="HRj-hW-tDU"/>
+                                    <action selector="onClickFinishButton:" destination="w9L-l3-NEY" eventType="touchUpInside" id="PFC-OY-b6T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -368,6 +379,10 @@
                         <viewLayoutGuide key="safeArea" id="mao-nl-FhI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="fFS-de-V2W"/>
+                    <connections>
+                        <outlet property="btnFinish" destination="w5n-61-Lhz" id="QI5-C1-wW0"/>
+                        <outlet property="mkMapView" destination="bhG-Md-mnn" id="91U-jj-emS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkQ-JU-41A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,20 +391,27 @@
         <!--On The Map-->
         <scene sceneID="9aE-IM-XOi">
             <objects>
-                <tabBarController id="elb-zz-c2e" sceneMemberID="viewController">
+                <tabBarController id="elb-zz-c2e" customClass="TabBarLocationsViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="On The Map" id="Dh0-cb-E4V">
                         <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="asW-cK-sbZ">
                             <color key="tintColor" red="0.0" green="0.70196078429999997" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onClickLogoutButton:" destination="elb-zz-c2e" id="QDK-fU-vs2"/>
+                            </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="W1J-ji-M3M">
                                 <color key="tintColor" red="0.0" green="0.70196078429999997" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <action selector="onClickAddButton:" destination="elb-zz-c2e" id="GrM-Hg-3qh"/>
                                     <segue destination="Jhm-zS-5Cm" kind="presentation" identifier="goToAddLocationSegue" id="Cdu-Vh-p0P"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="refresh" id="hbw-En-INf">
                                 <color key="tintColor" red="0.0" green="0.70196078429999997" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onClickRefreshButton:" destination="elb-zz-c2e" id="k5X-7r-b3x"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -399,6 +421,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="btnAdd" destination="W1J-ji-M3M" id="U4n-6i-NWs"/>
+                        <outlet property="btnLogout" destination="asW-cK-sbZ" id="SPQ-4q-TnX"/>
+                        <outlet property="btnRefresh" destination="hbw-En-INf" id="ysY-tC-hKd"/>
                         <segue destination="dQL-Qg-i1M" kind="relationship" relationship="viewControllers" id="ACi-PU-W8L"/>
                         <segue destination="BCO-xF-zjA" kind="relationship" relationship="viewControllers" id="biv-T0-MQa"/>
                     </connections>

@@ -9,12 +9,12 @@
 import Foundation
 
 struct NetworkConstants {
-    struct HTTPHeaderField {
-        static let accept = "Accept"
-        static let contentType = "Content-Type"
+    struct UdacityHeaderKeys {
+        static let Accept = "Accept"
+        static let ContentType = "Content-Type"
     }
     
-    struct HTTPHeaderFieldValue {
+    struct UdacityHeaderValues {
         static let json = "application/json"
     }
     
@@ -40,4 +40,22 @@ struct NetworkConstants {
         static let StudentLocation = "/classes/StudentLocation"
     }
     
+    struct ParseHeaderKeys {
+        static let APIKey = "X-Parse-REST-API-Key"
+        static let ApplicationID = "X-Parse-Application-Id"        
+    }
+    
+    struct ParseHeaderValues {
+        static let APIKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
+        static let ApplicationID = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
+    }
+    
+    struct ParseParameterKeys {
+        static let Limit = "limit"
+        static let Order = "order"
+    }
+    struct ParseParameterValues {
+        static let Limit = "100"
+        static let Order = "-updatedAt"
+    }
 }

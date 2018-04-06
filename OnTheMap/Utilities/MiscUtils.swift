@@ -7,7 +7,11 @@
 //
 
 import Foundation
-
+import UIKit
 class MiscUtils {
-
+    static func openExternalLink(_ url: String?) {
+        if let url = url, let urllink = URL(string: url) {
+            UIApplication.shared.open(urllink, options: [:])
+        }
+    }
 }

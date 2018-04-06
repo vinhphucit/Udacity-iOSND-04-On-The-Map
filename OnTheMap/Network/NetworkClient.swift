@@ -34,7 +34,7 @@ class NetworkClient: NSObject {
                         
             /* GUARD: Was there an error? */
             guard (error == nil) else {
-                sendError("There was an error with your request: \(error!.localizedDescription)")
+                sendError(error!.localizedDescription)
                 return
             }
             
@@ -47,10 +47,12 @@ class NetworkClient: NSObject {
             switch (statusCode) {
             case 403:
                 sendError("Please check your credentials and try again.")
+                return
             case 200 ..< 299:
                 break
             default:
                 sendError("Your request returned a status code other than 2xx!")
+                return
             }
             
             /* GUARD: Was there any data returned? */
@@ -73,12 +75,24 @@ class NetworkClient: NSObject {
         task.resume()
         return task
     }
-    
+    func doPostStudentLocation(student: StudentInformation, completion: @escaping (_ data: PostStudentLocationResponse?, _ error : String?) -> Void) {
+        makeRequest(.doPostAStudenLocation(student: student), type: PostStudentLocationResponse.self, completion: completion)
+    }
+    func doGetUserInfo(completion: @escaping (_ data: UserInfoResponseModel?, _ error : String?) -> Void) {
+        makeRequest(.doLoadUserInfo(), type: UserInfoResponseModel.self, completion: completion)
+    }
     
     func doLogin(email: String, password: String, completion: @escaping (_ data: AuthSessionModel?, _ error : String?) -> Void) {
         makeRequest(.doLogin(email: email, password: password), type: AuthSessionModel.self, completion: completion)
     }
     
+    func doGetLocations(completion: @escaping (_ data: LocationsResponseModel?, _ error : String?) -> Void) {
+        makeRequest(.getStudenLocations(), type: LocationsResponseModel.self, completion: completion)
+    }
+    
+    func doLogout(session: String, completion: @escaping (_ data: LogoutResponseModel?, _ error : String?) -> Void) {
+        makeRequest(.doLogout(session: session), type: LogoutResponseModel.self, completion: completion)
+    }
     
     static let shared = NetworkClient()
 }
