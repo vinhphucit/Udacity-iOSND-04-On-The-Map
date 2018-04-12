@@ -15,6 +15,7 @@ class PostingViewController
     @IBOutlet weak var tfLocation: UITextField!
     @IBOutlet weak var tfLink: UITextField!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var btnFindLocation: UIButton!
     var clGeocoder = CLGeocoder()
     var studentInformation: StudentInformation?
@@ -22,6 +23,7 @@ class PostingViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoading(false)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -59,8 +61,15 @@ class PostingViewController
 
     }
     
+    private func showLoading(_ isLoading: Bool){
+        isLoading ? self.loadingIndicator.startAnimating(): self.loadingIndicator.stopAnimating()
+        self.loadingIndicator.isHidden = !isLoading
+    }
+    
     private func findLocationByName(locationName: String){
+        showLoading(true)
         clGeocoder.geocodeAddressString(locationName) { (placemarkers, error) in
+            self.showLoading(false)
             self.setUIEnabled(true)
             if let error = error {
                 self.presentAlert(title: "Error", message: error.localizedDescription){ (alert) in

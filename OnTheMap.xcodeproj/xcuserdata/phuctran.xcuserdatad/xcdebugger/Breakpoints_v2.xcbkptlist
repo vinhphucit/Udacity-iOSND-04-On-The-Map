@@ -9,70 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OnTheMap/Network/NetworkClient.swift"
-            timestampString = "544699745.262453"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "makeRequest(_:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/Network/NetworkClient.swift"
-            timestampString = "544699745.262605"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "makeRequest(_:type:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OnTheMap.NetworkClient.makeRequest&lt;A where A: Swift.Decodable&gt;(OnTheMap.APIRequest, type: A.Type, completion: (Swift.Optional&lt;A&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; Swift.Optional&lt;__ObjC.URLSessionDataTask&gt;"
-                  moduleName = "OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Data/Ext%20Projects/Udacity/iOSND/04%20On%20The%20Map/OnTheMap/Network/NetworkClient.swift"
-                  timestampString = "544522650.9087059"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "290">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in OnTheMap.NetworkClient.makeRequest&lt;A where A: Swift.Decodable&gt;(OnTheMap.APIRequest, type: A.Type, completion: (Swift.Optional&lt;A&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; Swift.Optional&lt;__ObjC.URLSessionDataTask&gt;"
-                  moduleName = "OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Data/Ext%20Projects/Udacity/iOSND/04%20On%20The%20Map/OnTheMap/Network/NetworkClient.swift"
-                  timestampString = "544522650.931561"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "413">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "OnTheMap/Network/NetworkRequest.swift"
             timestampString = "544699745.262732"
             startingColumnNumber = "9223372036854775807"
@@ -169,54 +105,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OnTheMap/Network/NetworkClient.swift"
-            timestampString = "544699745.263275"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "doLogin(email:password:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OnTheMap.NetworkClient.doLogin(email: Swift.String, password: Swift.String, completion: () -&gt; (), error: (Swift.String) -&gt; ()) -&gt; ()"
-                  moduleName = "OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Data/Ext%20Projects/Udacity/iOSND/04%20On%20The%20Map/OnTheMap/Network/NetworkClient.swift"
-                  timestampString = "544520986.2821209"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;OnTheMap.AuthSessionModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in OnTheMap.NetworkClient.doLogin(email: Swift.String, password: Swift.String, completion: () -&gt; (), error: (Swift.String) -&gt; ()) -&gt; ()"
-                  moduleName = "OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/Data/Ext%20Projects/Udacity/iOSND/04%20On%20The%20Map/OnTheMap/Network/NetworkClient.swift"
-                  timestampString = "544520986.289199"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "67">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "OnTheMap/Controllers/AuthenticationViewController.swift"
             timestampString = "544699745.2633491"
             startingColumnNumber = "9223372036854775807"
@@ -224,38 +112,6 @@
             startingLineNumber = "52"
             endingLineNumber = "52"
             landmarkName = "doLogin(email:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/Network/NetworkClient.swift"
-            timestampString = "544699745.263418"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "sendError(_:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/Network/NetworkClient.swift"
-            timestampString = "544699745.263473"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "makeRequest(_:type:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -282,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/Controllers/PostingViewController.swift"
-            timestampString = "544699745.2636091"
+            timestampString = "545213456.6066231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "findLocationByName(locationName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/Controllers/PostingViewController.swift"
-            timestampString = "544699745.263664"
+            timestampString = "545213456.606999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "findLocationByName(locationName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/Controllers/ConfirmPostingViewController.swift"
-            timestampString = "544699745.2637171"
+            timestampString = "545155942.358907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -330,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/Controllers/PostingViewController.swift"
-            timestampString = "544699745.263769"
+            timestampString = "545213456.607219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "findLocationByName(locationName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/Controllers/PostingViewController.swift"
-            timestampString = "544699745.263816"
+            timestampString = "545213456.607417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "findLocationByName(locationName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -529,38 +385,6 @@
             endingLineNumber = "72"
             landmarkName = "httpBody"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/Network/NetworkClient.swift"
-            timestampString = "544699745.264273"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "makeRequest(_:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/Network/NetworkClient.swift"
-            timestampString = "544699745.264313"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "sendError(_:)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

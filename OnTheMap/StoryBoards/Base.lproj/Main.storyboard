@@ -302,12 +302,17 @@
                                     <constraint firstItem="ytg-xi-PEz" firstAttribute="height" secondItem="S3E-QO-HbA" secondAttribute="height" id="p04-Ka-ppG"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-cj-XGg">
+                                <rect key="frame" x="177" y="355.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.0" green="0.70196078429999997" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lO4-AH-ZFR" firstAttribute="centerX" secondItem="E10-dB-a0E" secondAttribute="centerX" id="7HW-BF-1ZR"/>
+                            <constraint firstItem="EDN-cj-XGg" firstAttribute="centerY" secondItem="E10-dB-a0E" secondAttribute="centerY" id="Drc-eq-5lL"/>
                             <constraint firstItem="Snc-te-UYO" firstAttribute="top" secondItem="lO4-AH-ZFR" secondAttribute="bottom" constant="31" id="EZ3-lZ-5ZC"/>
+                            <constraint firstItem="EDN-cj-XGg" firstAttribute="centerX" secondItem="E10-dB-a0E" secondAttribute="centerX" id="J2w-9N-hoG"/>
                             <constraint firstItem="Snc-te-UYO" firstAttribute="leading" secondItem="E10-dB-a0E" secondAttribute="leading" constant="32" id="jaY-ei-Wfj"/>
                             <constraint firstItem="lO4-AH-ZFR" firstAttribute="top" secondItem="E10-dB-a0E" secondAttribute="top" constant="84" id="kCd-OP-K0D"/>
                             <constraint firstItem="E10-dB-a0E" firstAttribute="trailing" secondItem="Snc-te-UYO" secondAttribute="trailing" constant="32" id="sw4-it-VKi"/>
@@ -325,6 +330,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnFindLocation" destination="ytg-xi-PEz" id="Gr6-18-9sA"/>
+                        <outlet property="loadingIndicator" destination="EDN-cj-XGg" id="JG3-cH-flh"/>
                         <outlet property="tfLink" destination="l1e-me-nID" id="BZ9-4O-zlP"/>
                         <outlet property="tfLocation" destination="S3E-QO-HbA" id="0pP-D4-nSq"/>
                         <segue destination="w9L-l3-NEY" kind="show" identifier="goToConfirmAddLocationSegue" id="YGu-Cz-7Re"/>
